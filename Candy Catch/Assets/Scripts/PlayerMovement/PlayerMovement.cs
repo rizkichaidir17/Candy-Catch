@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void LeftButtonDown()
     {
-        
+        Player._moveLeft = true;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void LeftButtonUp()
     {
-        
+        Player._moveLeft = false;
+    }
+    public void RightButtonDown()
+    {
+        Player._moveRight = true;
+    }
+    public void RightButtonUp()
+    {
+        Player._moveRight = false;
     }
 }

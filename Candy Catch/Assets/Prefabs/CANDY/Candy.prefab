@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2277817721635334396}
   - component: {fileID: 5319320623520975865}
   - component: {fileID: 8068519707715131623}
+  - component: {fileID: 499853386156150026}
   m_Layer: 0
   m_Name: Candy
   m_TagString: Candy
@@ -111,3 +112,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &499853386156150026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765989549199519680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d52578533a0c1e4e9e889e3e176da18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candySAO: {fileID: 11400000, guid: 4d3838ec4ebcc9b468a688c7adc161fd, type: 2}
+  point: 0
