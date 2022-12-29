@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8068519707715131623}
   - component: {fileID: 499853386156150026}
   m_Layer: 0
-  m_Name: Candy
+  m_Name: Candy 1
   m_TagString: Candy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.21133333}
@@ -124,5 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d52578533a0c1e4e9e889e3e176da18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  candySAO: {fileID: 11400000, guid: 4d3838ec4ebcc9b468a688c7adc161fd, type: 2}
+  candySAO: {fileID: 11400000, guid: 28666c43c220f3c4a8cd5fde5773c58a, type: 2}
   point: 0

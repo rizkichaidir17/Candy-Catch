@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0e7639d17a40c64e8c75569c3c81b25, type: 3}
-  m_Name: Candy1
+  m_Name: Candy 2
   m_EditorClassIdentifier: 
-  point: 10
-  candySprite: {fileID: 21300000, guid: 48ce0451c421d554ebbc225a1bada3b7, type: 3}
-  movementSpeed: 5
+  point: 150
+  candySprite: {fileID: 21300000, guid: a0571b40168d03f4ea8746a8c55eedb3, type: 3}
+  movementSpeed: 15
   size: {x: 0.5, y: 0.5, z: 0}
