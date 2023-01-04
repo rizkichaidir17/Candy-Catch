@@ -44,7 +44,7 @@ public class CandySpawn : MonoBehaviour
         else
         {
             currentCD = cooldown;
-            Vector3 vector = new Vector3(Random.Range(randomX.x, randomX.y), 5.27f, 0);
+            Vector3 vector = new Vector3(Random.Range(randomX.x, randomX.y), transform.position.y, 0);
             ObjectPooling.Activated(candy, false, candies, transform, vector);
         }
     }
