@@ -32,5 +32,6 @@ public class GameManager : MonoBehaviour
     void Death()
     {
         gamePause = true;
+        UIManager.ins._gameOverPanel.SetActive(true);
     }
 }
