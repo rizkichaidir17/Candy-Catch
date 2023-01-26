@@ -12,26 +12,49 @@ public class Player : MonoBehaviour
     float _moveSpeed;
     int _hp;
     public static int currentHp;
+    Animator animator;
+    
 
+
+    private void Awake()
+    {
+    }
     // Start is called before the first frame update
     void Start()
     {
+        
         _moveSpeed = PlayerSAO.speedMovement;
         _hp = PlayerSAO.hp;
         currentHp = _hp;
+        animator = GetComponent<Animator>();
+        animator.runtimeAnimatorController = PlayerSAO.animatorController;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (GameManager.ins.gamePause == true) return;
+        Movement();
+    }
+
+    private void Movement()
+    {
         if (_moveLeft == true)
         {
             transform.position += Vector3.left * _moveSpeed * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(new Vector3(0, -180, 0));
+            animator.SetBool("Run", true);
+
         }
-        else if(_moveRight == true)
+        else if (_moveRight == true)
         {
             transform.position += Vector3.right * _moveSpeed * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            animator.SetBool("Run", true);
+        }
+        else
+        {
+            animator.SetBool("Run", false);
         }
     }
 

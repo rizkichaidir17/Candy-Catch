@@ -24,6 +24,7 @@ public class Candy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.ins.gamePause == true) return;
         transform.position += Vector3.down * movementSpeed * Time.deltaTime;
     }
 }

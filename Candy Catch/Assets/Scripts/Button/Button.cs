@@ -10,25 +10,43 @@ public enum ButtonEnum
     Pause,
     Unpause,
 }
+
+public enum Karater
+{
+    Boy,
+    girl,
+}
 public class Button : MonoBehaviour
 {
     public ButtonEnum buttonState;
+    public Karater _char;
     public void ButtonClick()
     {
         switch (buttonState)
         {
             case ButtonEnum.PlayAgain:
-                SceneManager.LoadScene("GamePlay");
+                LoadScene("GamePlay");
                 break;
             case ButtonEnum.Exit:
-                SceneManager.LoadScene("MainMenu");
+                LoadScene("MainMenu");
                 break;
             case ButtonEnum.Pause:
-                GameManager.ins.gamePause = true;
+                gamePause(true);
                 break;
             case ButtonEnum.Unpause:
-                GameManager.ins.gamePause = false;
+                gamePause(false);
                 break;
         }
+    }
+
+    private static void LoadScene(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
+
+    private static void gamePause(bool setActive)
+    {
+        GameManager.ins.gamePause = setActive;
+        UIManager.ins.gamePausePanel.SetActive(setActive);
     }
 }

@@ -8,4 +8,6 @@ public class PlayerSAO : ScriptableObject
 {
     public float speedMovement;
     public int hp;
+    public RuntimeAnimatorController animatorController;
+
 }

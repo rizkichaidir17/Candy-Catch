@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] TMP_Text _pointText;
 
     public GameObject _gameOverPanel;
+    public GameObject gamePausePanel;
 
     // Start is called before the first frame update
 

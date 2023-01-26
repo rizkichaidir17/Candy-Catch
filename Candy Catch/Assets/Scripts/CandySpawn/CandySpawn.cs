@@ -31,7 +31,7 @@ public class CandySpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Player.currentHp == 0) return;
+        if(GameManager.ins.gamePause == true) return;
         Cooldown();
     }
 
