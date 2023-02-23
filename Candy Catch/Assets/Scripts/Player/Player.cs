@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class Player : MonoBehaviour
 {
     public PlayerSAO PlayerSAO;
+
+    EnumPilihKarakter pilihKarakter;
 
     public static bool _moveLeft = false;
     public static bool _moveRight = false;
@@ -13,8 +16,8 @@ public class Player : MonoBehaviour
     int _hp;
     public static int currentHp;
     Animator animator;
-    
 
+    private readonly string selectedCharacter = "SelectedCharacter";
 
     private void Awake()
     {
@@ -22,7 +25,25 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        int getKarakter;
+        getKarakter = PlayerPrefs.GetInt(selectedCharacter);
+        switch (getKarakter)
+        {
+            case 1:
+                PlayerSAO = AssetDatabase.LoadAssetAtPath<PlayerSAO>("Assets/SAO/Player/Player1.asset");
+                break;
+            case 2:
+                PlayerSAO = AssetDatabase.LoadAssetAtPath<PlayerSAO>("Assets/SAO/Player/Player2.asset");
+                break;
+            default:
+                PlayerSAO = AssetDatabase.LoadAssetAtPath<PlayerSAO>("Assets/SAO/Player/Player1.asset");
+                break;
+        }
+        Inisialisasi();
+    }
+
+    private void Inisialisasi()
+    {
         _moveSpeed = PlayerSAO.speedMovement;
         _hp = PlayerSAO.hp;
         currentHp = _hp;

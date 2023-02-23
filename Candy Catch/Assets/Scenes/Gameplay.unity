@@ -678,7 +678,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonState: 2
-  _char: 0
 --- !u!114 &379510194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1540,7 +1539,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonState: 2
-  _char: 0
 --- !u!114 &631135653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1689,7 +1687,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonState: 1
-  _char: 0
 --- !u!114 &782962962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2486,7 +2483,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonState: 4
-  _char: 0
 --- !u!114 &1255288973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2865,7 +2861,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonState: 3
-  _char: 0
 --- !u!114 &1616045823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3993,7 +3988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0705e1ba38d41c468b96d6117d03a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerSAO: {fileID: 11400000, guid: ff59667eb7e0b5c478e789c5b4580c06, type: 2}
+  PlayerSAO: {fileID: 0}
 --- !u!61 &2014248617
 BoxCollider2D:
   m_ObjectHideFlags: 0

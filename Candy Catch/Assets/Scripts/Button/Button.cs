@@ -11,15 +11,9 @@ public enum ButtonEnum
     Unpause,
 }
 
-public enum Karater
-{
-    Boy,
-    girl,
-}
 public class Button : MonoBehaviour
 {
     public ButtonEnum buttonState;
-    public Karater _char;
     public void ButtonClick()
     {
         switch (buttonState)

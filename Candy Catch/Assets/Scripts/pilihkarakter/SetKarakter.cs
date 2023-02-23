@@ -1,20 +1,23 @@
 using UnityEngine;
 
-public enum PilihKarakter
-{
-    boy,
-    girl,
-}
+
 
 public class SetKarakter: MonoBehaviour
 {
-    public PilihKarakter pilihKarakter;
-   public void SetChar()
+    public EnumPilihKarakter pilihKarakter;
+    private readonly string selectedCharacter = "SelectedCharacter";
+    public void SetChar()
     {
         switch (pilihKarakter) 
         {
-            case PilihKarakter.boy:
-                PlayerPrefs.SetInt("Karakter", 1);
+            case EnumPilihKarakter.boy:
+                PlayerPrefs.SetInt(selectedCharacter, 1);
+                break;
+            case EnumPilihKarakter.girl:
+                PlayerPrefs.SetInt(selectedCharacter, 2);
+                break;
+            default:
+                PlayerPrefs.SetInt(selectedCharacter, 1);
                 break;
         }
     }
